@@ -1,0 +1,143 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'Architects Daughter';
+    src: url('../fonts/architectsdaughter.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Chelsea Market';
+    src: url('../fonts/chelseamarket.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-links a {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 1.125rem;
+}
+
+@media (min-width: 1200px) {
+    nav .w-full {
+        padding-left: 4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    .nav-links a {
+        font-size: 0.875rem;
+    }
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-section.hero-background {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 15rem;
+    padding-left: 8rem;
+}
+
+.hero-section.hero-background h1 {
+    font-family: 'Chelsea Market', cursive;
+    text-align: left;
+    font-size: 5rem;
+    max-width: 45%;
+    line-height: 1.2;
+}
+
+.hero-section.hero-background h2 {
+    font-family: 'Chelsea Market', cursive;
+    text-align: left;
+    font-size: 2.5rem;
+    max-width: 45%;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-section.hero-background h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-section.hero-background h2 {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section.hero-background {
+        padding-top: 7rem;
+        padding-left: 2rem;
+    }
+    
+    .hero-section.hero-background h1 {
+        font-size: 2rem;
+        max-width: 70%;
+    }
+    
+    .hero-section.hero-background h2 {
+        font-size: 1.25rem;
+        max-width: 70%;
+    }
+}
+
+.stat-number {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hero-background {
+    background-image: url('../images/image1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero-background > * {
+    position: relative;
+    z-index: 1;
+}
+
+.text-shadow-lg {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 3rem;
+    }
+}
