@@ -32,6 +32,15 @@ body {
     font-size: 1.125rem;
 }
 
+.nav-links a:hover {
+    color: #f97316 !important;
+}
+
+.nav-links a:hover img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(95%) saturate(1953%) hue-rotate(360deg) brightness(101%) contrast(95%);
+    transition: filter 0.3s ease;
+}
+
 @media (min-width: 1200px) {
     nav .w-full {
         padding-left: 4rem;
@@ -54,9 +63,9 @@ body {
 }
 
 .hero-section.hero-background {
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-start;
-    padding-top: 15rem;
+    padding-bottom: 7rem;
     padding-left: 8rem;
 }
 
@@ -87,7 +96,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section.hero-background {
-        padding-top: 7rem;
+        padding-bottom: 7rem;
         padding-left: 2rem;
     }
     
@@ -132,6 +141,30 @@ body {
     z-index: 1;
 }
 
+.about-background {
+    background-image: url('../images/learn-more.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.about-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.about-background > * {
+    position: relative;
+    z-index: 1;
+}
+
 .text-shadow-lg {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -140,4 +173,18 @@ body {
     .stat-number {
         font-size: 3rem;
     }
+}
+
+#what-we-do h1,
+#what-we-do h2,
+#what-we-do h3,
+#what-we-do a {
+    font-family: 'Chelsea Market', cursive;
+}
+
+#about h1,
+#about h2,
+#about h3,
+#about a {
+    font-family: 'Chelsea Market', cursive;
 }
