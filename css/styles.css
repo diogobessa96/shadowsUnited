@@ -27,6 +27,22 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+nav {
+    transition: all 0.3s ease;
+}
+
+nav .flex {
+    transition: height 0.3s ease;
+}
+
+nav.nav-scrolled .flex {
+    height: 3.5rem !important;
+}
+
+nav img {
+    transition: height 0.3s ease;
+}
+
 .nav-links a {
     font-family: 'Chelsea Market', cursive;
     font-size: 1.125rem;
